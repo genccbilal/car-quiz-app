@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #4f46e5;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --background-color: #f1f5f9;
+  --card-background: #ffffff;
+  --transition: all 0.5s ease;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.home-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #e0e7ff, #f1f5f9);
+}
+
+.home-card {
+  background-color: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+}
+
+.home-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.start-button {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  max-width: 220px;
+}
+
+.start-button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+@media (max-width: 640px) {
+  .home-card {
+    padding: 2rem;
+  }
+
+  .home-title {
+    font-size: 1.75rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .start-button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
